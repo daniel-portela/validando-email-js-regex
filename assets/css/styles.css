@@ -1,0 +1,115 @@
+/* Definição de variáveis de cores */
+:root {
+    --background-color: #f0f0f0;
+    --container-background: #fff;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #ccc;
+    --button-background: #1040cd;
+    --button-hover-background: #0c22e3;
+    --button-text-color: white;
+    --error-color: red;
+    --success-color: green;
+    --font-family: Arial, sans-serif;
+    --input-focus-border-color: #1040cd;
+    --input-focus-box-shadow: 0 0 5px rgba(16, 64, 205, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+}
+
+.container {
+    background: var(--container-background);
+    padding: 20px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: var(--input-focus-border-color);
+    box-shadow: var(--input-focus-box-shadow);
+    outline: none;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--border-color);
+    padding: 0;
+}
+
+button {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 15px;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-background);
+}
+
+.error-message {
+    color: var(--error-color);
+    margin: 5px 0;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.success-message {
+    color: var(--success-color);
+    margin-top: 15px;
+    font-size: 1em;
+    text-align: left;
+}
